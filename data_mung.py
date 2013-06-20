@@ -6,4 +6,4 @@ pieces = [data_set["instagram_likes"], data_set["instagram_comments"], data_set[
 
 new_df = pd.concat(pieces, axis=1)
 
-print new_df
+new_df.to_csv("first_training_dataset.csv")

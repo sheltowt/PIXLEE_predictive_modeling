@@ -13,19 +13,22 @@ def wordCount(data_frame_column):
     titleString.replace("#", " #")
     words = titleString.split()
     for word in words:
+      word = word.lower()
       wordArray.append(word)
   counter = collections.Counter(wordArray)
-  return counter.most_common(100)
+  return counter.most_common(50)
     
-top100hashtags = wordCount(titles)
+top50hashtags = wordCount(titles)
 
-arrayoftop100 = []
+arrayoftop50 = []
 
-for x in top100hashtags:
+word_count = 0
+for x in top50hashtags:
   dataset[x[0]] = 0
-  arrayoftop100.append(x[0])
+  arrayoftop50.append(x[0])
+  word_count += 1
 
-def top100words(processed_dataset):
+def top50words(processed_dataset):
   count = -1
   titles = processed_dataset["title"]
   for x in titles:
@@ -33,12 +36,15 @@ def top100words(processed_dataset):
     titleString = str(x)
     titleString.replace("#", " #")
     words = titleString.split()
+    word_count = 0
     for word in words:
-      if word in arrayoftop100:
+      word = word.lower()
+      if word in arrayoftop50:
         processed_dataset[word][count] = 1
+      word_count += 1
         
-top100words(dataset)      
+top50words(dataset)      
 
 
-dataset.to_csv("dataset_100mostcommonhashtags.csv")
+dataset.to_csv("dataset_50mostcommonhashtags_error.csv")
 

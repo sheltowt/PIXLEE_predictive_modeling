@@ -1,7 +1,7 @@
 PIXLEE_predictive_modeling
 ==========================
 
-The purpose of this repo was to explore a strategy PIXLEE could implement to predict the virality of a photo, with the purpose of being able to select photos for a photo dashboard that had a high probability of virality.  The dataset I used was pulled from PIXLEE's API and contained information about Instagram photos that contained the #coke or #coca-cola hashtags. The three objectives of this project were to develop scripts that transformed the data into a format suitable for machine learning, to evaluate the amount of variance features contributed to the number of instagram_likes a photo recieved, and to evaluate how effective a variety of regression algorithms were at building a model to predict the number of likes a photo received.  
+The purpose of this repo was to explore a strategy PIXLEE could implement to predict the virality of a photo, with the purpose of being able to select photos for a photo dashboard that had a high probability of virality.  The dataset I used was pulled from PIXLEE's API, and contained data about Instagram photos that contained the #coke or #coca-cola hashtags. The three objectives of this project were to develop scripts that transformed the data into a format suitable for machine learning, to evaluate the amount of variance features contributed to the number of instagram_likes a photo recieved, and to evaluate how effective a variety of regression algorithms were at building a model to predict the number of likes a photo received.  
 
 PIXLEE enables clients to collect, display and measure authentic user-generated photos.  Customers can leverage these photos to drive traffic and increase sales through interactive photo dashboards, or competitions.  
 
